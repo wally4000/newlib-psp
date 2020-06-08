@@ -8,18 +8,59 @@ AM_CCASFLAGS = $(INCLUDES) $(CFLAGS)
 
 noinst_LIBRARIES = lib.a
 
-LIBCGLUE_MULT_OBJS = _close.o _exit.o _fork.o _fstat.o _getpid.o \
-                     _gettimeofday.o _kill.o _lseek.o _open.o _read.o \
-                     _sbrk.o _wait.o _write.o clock.o isatty.o _isatty.o \
-                     time.o _link.o _unlink.o sleep.o opendir.o readdir.o \
-                     closedir.o getcwd.o chdir.o mkdir.o rmdir.o \
-                     realpath.o _stat.o truncate.o access.o tzset.o \
-                     __psp_set_errno.o mlock.o _fcntl.o _rename.o nanosleep.o
+LIBCGLUE_MULT_OBJS = 	_close.o \
+						_exit.o \
+						_fork.o \
+						_fstat.o \
+						_getpid.o \
+						_gettimeofday.o \
+						_kill.o \
+						_lseek.o \
+						_open.o \
+						_read.o \
+						_sbrk.o \
+						_wait.o \
+						_write.o \
+						clock.o \
+						isatty.o \
+						_isatty.o \
+						time.o \
+						_link.o \
+						_unlink.o \
+						sleep.o \
+						opendir.o \
+						readdir.o \
+						closedir.o \
+						getcwd.o \
+						chdir.o \
+						mkdir.o \
+						rmdir.o \
+						realpath.o \
+						_stat.o \
+						truncate.o \
+						access.o \
+						tzset.o \
+						__psp_set_errno.o \
+						mlock.o \
+						_fcntl.o \
+						_rename.o \
+						nanosleep.o
 
-SOCKET_MULT_OBJS = socket.o accept.o bind.o connect.o getsockopt.o \
-                   listen.o recv.o recvfrom.o send.o sendto.o \
-                   setsockopt.o shutdown.o getsockname.o getpeername.o \
-                   inet_ntoa.o
+SOCKET_MULT_OBJS = 	socket.o \
+					accept.o \
+					bind.o
+					connect.o
+					getsockopt.o \
+					listen.o \
+					recv.o \
+					recvfrom.o \
+					send.o \
+					sendto.o \
+					setsockopt.o \
+					shutdown.o \
+					getsockname.o \
+					getpeername.o \
+					inet_ntoa.o
 
 PE_OBJS = pipe.o
 
@@ -29,17 +70,47 @@ SELECT_OBJS = select.o
 
 INTERRUPT_OBJS = interrupt.o
 
-XPRINTF_MULT_OBJS = vxprintf.o _xprintf.o __sout.o vsnprintf.o snprintf.o \
-                    vsprintf.o sprintf.o __mout.o mprintf.o vmprintf.o asprintf.o \
-                    vasprintf.o __fout.o fprintf.o vfprintf.o printf.o vprintf.o \
+XPRINTF_MULT_OBJS = vxprintf.o \
+					_xprintf.o \
+					__sout.o \
+					vsnprintf.o \
+					snprintf.o \
+                    vsprintf.o \
+					sprintf.o \
+					__mout.o \
+					mprintf.o \
+					vmprintf.o \
+					asprintf.o \
+                    vasprintf.o \
+					__fout.o \
+					fprintf.o \
+					vfprintf.o \
+					printf.o \
+					vprintf.o \
                     _sprintf_r.o
 
 NETDB_MULT_OBJS = h_errno.o gethostbyaddr.o gethostbyname.o
 
 
-lib_a_SOURCES = libcglue.c socket.c pspcwd.c xprintf.c netdb.c pipe.c fdman.c select.c syscalls.c interrupt.S
-lib_a_LIBADD  = $(LIBCGLUE_MULT_OBJS) $(SOCKET_MULT_OBJS) $(XPRINTF_MULT_OBJS) \
-                $(NETDB_MULT_OBJS) $(PIPE_OBJS) $(FDMAN_OBJS) $(SELECT_OBJS) $(INTERRUPT_OBJS)
+lib_a_SOURCES = libcglue.c \
+				socket.c \
+				pspcwd.c \
+				xprintf.c \
+				netdb.c \
+				pipe.c \
+				fdman.c \
+				select.c \
+				syscalls.c \
+				interrupt.S
+				
+lib_a_LIBADD  = $(LIBCGLUE_MULT_OBJS) \
+				$(SOCKET_MULT_OBJS) \
+				$(XPRINTF_MULT_OBJS) \
+                $(NETDB_MULT_OBJS) \
+				$(PIPE_OBJS) \
+				$(FDMAN_OBJS) \
+				$(SELECT_OBJS) \
+				$(INTERRUPT_OBJS)
 
 all: crt0.o
 
