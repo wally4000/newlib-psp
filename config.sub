@@ -172,7 +172,7 @@ case $1 in
 					| hitachi* | c[123]* | convex* | sun | crds | omron* | dg \
 					| ultra | tti* | harris | dolphin | highlevel | gould \
 					| cbm | ns | masscomp | apple | axis | knuth | cray | psp \
-					| microblaze* | sim | cisco | psp \
+					| microblaze* | sim | cisco \
 					| oki | wec | wrs | winbond)
 						basic_machine=$field1-$field2
 						os=
