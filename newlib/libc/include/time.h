@@ -27,10 +27,7 @@
 
 #include <sys/types.h>
 #include <sys/timespec.h>
-
-#if __POSIX_VISIBLE >= 200809
 #include <sys/_locale.h>
-#endif
 
 _BEGIN_STD_C
 

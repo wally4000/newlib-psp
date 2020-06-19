@@ -66,7 +66,7 @@ typedef __gnuc_va_list va_list;
 #if __POSIX_VISIBLE >= 200809
 #include <sys/_locale.h>
 #endif
-
+#include <sys/_locale.h>
 _BEGIN_STD_C
 
 #if __POSIX_VISIBLE >= 200809 || _XSI_VISIBLE

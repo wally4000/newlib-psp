@@ -149,6 +149,8 @@ void	*reallocf(void *, size_t) __result_use_check __alloc_size(2);
 #endif
 #if __BSD_VISIBLE || __XSI_VISIBLE >= 4
 char *	realpath (const char *__restrict path, char *__restrict resolved_path);
+#else
+char* realpath(const char* path, char* resolved_path);
 #endif
 #if __BSD_VISIBLE
 int	rpmatch (const char *response);

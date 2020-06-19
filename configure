@@ -4590,10 +4590,12 @@ EXEEXT=$ac_cv_exeext
 ac_exeext=$EXEEXT
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
-
+#include <stdio.h>
 int
 main ()
 {
+FILE *f = fopen ("conftest.out", "w");
+ return ferror (f) || fclose (f) != 0;
 
   ;
   return 0;
