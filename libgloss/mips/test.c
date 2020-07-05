@@ -1,13 +1,13 @@
-main()
+void main()
 {
-  outbyte ('&');
-  outbyte ('@');
-  outbyte ('$');
-  outbyte ('%');
+  outbyte('&');
+  outbyte('@');
+  outbyte('$');
+  outbyte('%');
 
   /* whew, we made it */
-  
-  print ("\r\nDone...");
+
+  print("\r\nDone...");
 
   return;
 }
